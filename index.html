@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    if (localStorage.getItem('theme') === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  </script>
+  <title>Billy Toledo — Software Developer / DevOps Engineer</title>
+  <meta name="description" content="Billy Toledo — software developer and devops engineer. I build systems that survive the weekend.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="tux-walker" aria-hidden="true">
+    <svg class="tux-body" viewBox="0 0 10 14" shape-rendering="crispEdges">
+      <rect x="3" y="0" width="4" height="1" fill="#171717"/>
+      <rect x="2" y="1" width="6" height="1" fill="#171717"/>
+      <rect x="2" y="2" width="1" height="1" fill="#171717"/>
+      <rect x="3" y="2" width="1" height="1" fill="#ffffff"/>
+      <rect x="4" y="2" width="2" height="1" fill="#171717"/>
+      <rect x="6" y="2" width="1" height="1" fill="#ffffff"/>
+      <rect x="7" y="2" width="1" height="1" fill="#171717"/>
+      <rect x="2" y="3" width="2" height="1" fill="#171717"/>
+      <rect x="4" y="3" width="2" height="1" fill="#f2a33d"/>
+      <rect x="6" y="3" width="2" height="1" fill="#171717"/>
+      <rect x="2" y="4" width="6" height="1" fill="#171717"/>
+      <rect x="1" y="5" width="8" height="1" fill="#171717"/>
+      <rect x="0" y="6" width="2" height="1" fill="#171717"/>
+      <rect x="2" y="6" width="6" height="1" fill="#ffffff"/>
+      <rect x="8" y="6" width="2" height="1" fill="#171717"/>
+      <rect x="0" y="7" width="2" height="1" fill="#171717"/>
+      <rect x="2" y="7" width="6" height="1" fill="#ffffff"/>
+      <rect x="8" y="7" width="2" height="1" fill="#171717"/>
+      <rect x="0" y="8" width="2" height="1" fill="#171717"/>
+      <rect x="2" y="8" width="6" height="1" fill="#ffffff"/>
+      <rect x="8" y="8" width="2" height="1" fill="#171717"/>
+      <rect x="0" y="9" width="2" height="1" fill="#171717"/>
+      <rect x="2" y="9" width="6" height="1" fill="#ffffff"/>
+      <rect x="8" y="9" width="2" height="1" fill="#171717"/>
+      <rect x="0" y="10" width="2" height="1" fill="#171717"/>
+      <rect x="2" y="10" width="6" height="1" fill="#ffffff"/>
+      <rect x="8" y="10" width="2" height="1" fill="#171717"/>
+      <rect x="0" y="11" width="2" height="1" fill="#171717"/>
+      <rect x="2" y="11" width="6" height="1" fill="#ffffff"/>
+      <rect x="8" y="11" width="2" height="1" fill="#171717"/>
+      <rect x="1" y="12" width="8" height="1" fill="#171717"/>
+      <rect x="1" y="13" width="2" height="1" fill="#f2a33d"/>
+      <rect x="7" y="13" width="2" height="1" fill="#f2a33d"/>
+
+      <!-- sleep overlay: covers the eye pixels + a floating Z -->
+      <rect class="tux-eye-cover" x="3" y="2" width="1" height="1" fill="#171717"/>
+      <rect class="tux-eye-cover" x="6" y="2" width="1" height="1" fill="#171717"/>
+      <g class="tux-zzz">
+        <rect x="8" y="-3" width="3" height="1" fill="#ffffff"/>
+        <rect x="9" y="-2" width="1" height="1" fill="#ffffff"/>
+        <rect x="7" y="-1" width="3" height="1" fill="#ffffff"/>
+      </g>
+
+      <!-- wave overlay: a raised flipper -->
+      <rect class="tux-wave-arm" x="8" y="2" width="1" height="3" fill="#171717"/>
+    </svg>
+  </div>
+
+  <div class="page">
+
+    <nav class="nav">
+      <span class="nav-brand">BILLY_TOLEDO</span>
+      <a href="#off-the-clock" class="plain-link">off_the_clock</a>
+      <a href="#about" class="plain-link">about</a>
+      <a href="#contact" class="plain-link">contact</a>
+      <button id="theme-toggle" class="key-btn theme-toggle" type="button" aria-pressed="false">☼ light</button>
+      <a href="mailto:me@billytoledo.com" class="key-btn">mail_me</a>
+    </nav>
+
+    <div class="container">
+
+      <section class="hero">
+        <span class="eyebrow">[ software developer | devops engineer ]</span>
+        <h1 class="hero-title">
+          <span>I BUILD INFRA</span>
+          <span>THAT SURVIVE THE WEEKEND.</span>
+        </h1>
+        <p class="lede">
+          Billy, to most people. I write code and IaC and keep it alive, pipelines, uptime, infra that doesn't wake me at 3am. Off the clock: a music enthusiast, into fantasy worlds, and genuinely in love with computers.
+        </p>
+
+        <div id="terminal" class="terminal">
+          <div id="terminal-output" class="terminal-output"></div>
+          <div class="terminal-input-row">
+            <span>billy@toledo:~$&nbsp;</span>
+            <span id="terminal-input-text"></span>
+            <span class="c64-cursor"></span>
+            <input id="terminal-input" class="terminal-hidden-input" autocomplete="off" spellcheck="false" autofocus>
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <a href="https://github.com/billytoledo" target="_blank" rel="noopener" class="key-btn">github</a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener" class="key-btn">linkedin</a>
+          <a href="mailto:me@billytoledo.com" class="key-btn">me@billytoledo.com</a>
+        </div>
+      </section>
+
+      <hr class="hr">
+
+      <section class="section">
+        <span class="eyebrow">[ 01 ] skills</span>
+        <div class="skills-grid">
+          <div><span class="skills-label">languages:</span> PHP, Python, JavaScript, HTML, CSS, Lua, SQL</div>
+          <div><span class="skills-label">frameworks:</span> Laravel, Django, Express, Node, React, Vue</div>
+          <div><span class="skills-label">devops:</span> Docker, GitHub Actions, Bitbucket Pipelines, Nginx, FrankenPHP, Octane</div>
+          <div><span class="skills-label">cloud:</span> GCP, AWS, Azure, Hetzner, Digital Ocean</div>
+          <div><span class="skills-label">os:</span> Linux, Ubuntu, macOS, Windows</div>
+        </div>
+      </section>
+
+      <section id="about" class="about-section">
+        <span class="eyebrow">[ 02 ] about</span>
+        <h2 class="section-title">DEV BY DAY, DEVOPS BY HABIT</h2>
+        <p class="card-text about-text">
+          I build software, then make sure it stays built: pipelines, observability, infra that doesn't wake me up. I'd rather ship something boring and solid than something clever that falls over.
+        </p>
+      </section>
+
+      <hr class="hr">
+
+      <section id="off-the-clock" class="section">
+        <span class="eyebrow">[ 03 ] off the clock</span>
+        <div class="grid-3">
+          <div>
+            <h2 class="card-title">&gt; music</h2>
+            <p class="card-text">A music enthusiast, plain and simple. There's pretty much always something playing.</p>
+          </div>
+          <div>
+            <h2 class="card-title">&gt; fantasy</h2>
+            <p class="card-text">Into fantasy — worlds, stories, the kind of thing you can get lost in for hours.</p>
+          </div>
+          <div>
+            <h2 class="card-title">&gt; computers</h2>
+            <p class="card-text">I just really love computers. Building them, breaking them, keeping them alive.</p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="hr">
+
+      <section class="section tagline-section">
+        <p class="tagline">BORING <span class="tagline-accent">&gt;</span> CLEVER</p>
+      </section>
+
+      <hr class="hr">
+
+      <section id="contact" class="section">
+        <span class="eyebrow">[ 04 ] contact</span>
+        <h3 class="contact-title">let's talk</h3>
+        <p class="card-text contact-text">Work, collabs, or just to talk shop — my inbox is open.</p>
+        <div class="btn-row">
+          <a href="mailto:me@billytoledo.com" class="key-btn">write to me</a>
+          <a href="https://github.com/w4xccino" target="_blank" rel="noopener" class="key-btn">github</a>
+          <a href="https://linkedin.com/in/billytoledo" target="_blank" rel="noopener" class="key-btn">linkedin</a>
+        </div>
+        <!-- <p class="footnote">Longer stuff, occasionally, at <a href="https://blog.billytoledo.com" target="_blank" rel="noopener">blog.billytoledo.com</a>.</p> -->
+      </section>
+
+      <footer class="footer">
+        <p class="footnote">billy@toledo:~$<span class="footer-cursor"></span></p>
+      </footer>
+
+    </div>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
